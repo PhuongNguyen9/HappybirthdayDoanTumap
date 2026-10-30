@@ -19,9 +19,29 @@
     wasPlaying.set(audio, !audio.paused);
     audio.pause();
   });
+
+  // The password submit is a real user gesture. On mobile browsers this is
+  // the first reliable moment to start audible playback after autoplay is blocked.
   const unlockAudio = () => pageAudio.forEach(audio => {
-    if (wasPlaying.get(audio) || audio.hasAttribute('autoplay')) {
-      audio.play().catch(() => {});
+    const isMainSoundtrack = audio.id === 'soundtrack';
+    const userHasNotMutedMusic = sessionStorage.getItem('birthdayMainMusicPlaying') !== 'no';
+    const shouldResume = wasPlaying.get(audio) || audio.hasAttribute('autoplay') ||
+      (isMainSoundtrack && userHasNotMutedMusic);
+
+    if (!shouldResume) return;
+
+    const playback = audio.play();
+    if (isMainSoundtrack && playback && typeof playback.then === 'function') {
+      playback.then(() => {
+        sessionStorage.setItem('birthdayMainMusicPlaying', 'yes');
+        const musicButton = document.getElementById('musicBtn');
+        if (musicButton) musicButton.innerHTML = '♫ <span>Tắt nhạc</span>';
+      }).catch(() => {
+        const musicButton = document.getElementById('musicBtn');
+        if (musicButton) musicButton.innerHTML = '♫ <span>Chạm để nghe nhạc</span>';
+      });
+    } else if (playback && typeof playback.catch === 'function') {
+      playback.catch(() => {});
     }
   });
 
