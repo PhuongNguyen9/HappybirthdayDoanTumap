@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101827">
+<title>Mừng sinh nhật tuổi 28</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="birthday-gate-locked">
+<div class="birthday-gate" id="birthdayGate" role="dialog" aria-modal="true" aria-labelledby="birthdayGateTitle" aria-describedby="birthdayGateDescription">
+  <div class="birthday-gate-card">
+    <div class="gate-sparkle" aria-hidden="true">✦　♡　✦</div>
+    <span class="gate-kicker">A PRIVATE LITTLE UNIVERSE · 04.11.2026</span>
+    <h1 id="birthdayGateTitle">Chỉ dành riêng<br><em>cho anh thôi.</em></h1>
+    <p class="gate-copy" id="birthdayGateDescription">Có một cánh cửa nhỏ đang chờ được mở. Nhập mật mã của chúng mình để bắt đầu chuyến phiêu lưu tuổi 28 nhé.</p>
+    <div class="gate-heart" aria-hidden="true">♡</div>
+    <form class="birthday-gate-form" id="birthdayGateForm">
+      <input id="birthdayGatePassword" type="password" placeholder="Mật mã bí mật…" autocomplete="off" autocapitalize="none" spellcheck="false" aria-label="Mật mã bí mật" required>
+      <button id="birthdayGateSubmit" type="submit">MỞ CÁNH CỬA ♡</button>
+    </form>
+    <p class="gate-message" id="birthdayGateMessage" aria-live="polite"></p>
+    <p class="gate-footnote">MADE WITH LOVE · FOR ONE VERY SPECIAL PERSON</p>
+  </div>
+</div>
+
+<canvas id="fireworksCanvas" aria-hidden="true"></canvas><div class="grain"></div><div id="catMemeLayer" aria-hidden="true"><span class="flying-cat" style="top:18%">🐈</span><span class="flying-cat">🐾</span><span class="flying-cat">😼</span></div><div class="floating" aria-hidden="true"><span>✦</span><span>♡</span><span>✧</span><span>✦</span><span>♡</span></div>
+<header class="topbar"><a class="brand" href="#top">SINH NHẬT<span>.exe</span></a><nav><a href="#story">Lời mở đầu</a><a href="#gallery">Ảnh kỷ niệm</a><a href="#games">Góc kiểm tra</a></nav><button id="musicBtn" class="music">♫ <span>Bật nhạc</span></button></header>
+<main id="top">
+<section class="hero">
+  <div class="hero-copy"><p class="eyebrow"><i></i> NGÀY PHÁT HÀNH · 04.11.2026</p><p class="tiny-label">MỘT BẢN CẬP NHẬT RẤT ĐẶC BIỆT</p>
+  <h1>Chúc mừng<br><em>sinh nhật!</em></h1>
+  <p class="hero-desc">Hôm nay hệ thống chính thức phát hành phiên bản <b>tuổi 28</b> — nhiều trải nghiệm hơn, thêm vài tính năng đáng yêu, và vẫn còn một vài lỗi nhỏ… đáng yêu khó sửa. 😌</p>
+  <div class="hero-actions"><a class="primary" href="#story">Bắt đầu nhiệm vụ <span>↗</span></a><a class="secondary" href="#games">Kiểm tra người thương</a></div>
+  <div class="status"><span class="pulse"></span> TRẠNG THÁI: <b>HOẠT ĐỘNG TỐT</b><span class="sep">/</span> PHIÊN BẢN TUỔI 28</div></div>
+  <div class="hero-visual"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="portrait-frame"><img src="assets/photos/bin-avatar.jpg" alt="Ảnh đại diện của Bin"></div><div class="photo-sticker">NHÂN<br>VẬT<br>CHÍNH <b>✦</b></div><div class="age-chip">v28.0 <span>bản ổn định</span></div></div>
+  <div class="scroll-note">KÉO XUỐNG ĐỂ NHẬN THÊM YÊU THƯƠNG ↓</div>
+</section>
+<section class="ticker"><div>CHƯA PHÁT HIỆN LỖI NGHIÊM TRỌNG <b>✦</b> 100% NĂNG LƯỢNG TÍCH CỰC <b>✦</b> DỊCH VỤ CON NGƯỜI CHẠY 24/7 <b>✦</b> CHÚC MỪNG SINH NHẬT <b>✦</b> </div></section>
+<section class="quest-map" aria-label="Bản đồ hành trình Birthday Quest">
+ <div class="quest-map-head"><span>✦ BẢN ĐỒ HÀNH TRÌNH</span><b>MISSION 28 / 2026</b></div>
+ <h2>THE LOST GIFT <em>— tìm món quà bị thất lạc</em></h2>
+ <p>Đi qua từng tọa độ kỷ niệm. Mỗi điểm đến mở ra một mảnh ghép của câu chuyện hôm nay.</p>
+ <div class="quest-route">
+  <a href="#story" class="quest-stop"><i>01</i><span>BASE CAMP</span><b>Điểm khởi hành</b><small>Nhận nhiệm vụ</small></a>
+  <a href="#gallery" class="quest-stop"><i>02</i><span>MEMORY FOREST</span><b>Khu rừng ký ức</b><small>67 dấu vết được lưu</small></a>
+  <a href="#videos" class="quest-stop"><i>03</i><span>TIME PORTAL</span><b>Cánh cổng thời gian</b><small>4 thước phim bí mật</small></a>
+  <a href="#games" class="quest-stop"><i>04</i><span>QA DUNGEON</span><b>Hầm thử thách</b><small>6 câu hỏi · 3 huy hiệu</small></a>
+ </div>
+ <div class="quest-map-foot"><span>🐾 HƯỚNG DẪN VIÊN: BO & LỰU</span><span>FINAL TREASURE: LOCKED</span></div>
+</section>
+<section class="intro section" id="story"><div class="section-kicker">01 / GHI CHÚ PHIÊN BẢN</div><div class="intro-grid"><h2>28 tuổi rồi.<br><em>Thêm một chương mới.</em></h2><div><p class="lead">Mong tuổi mới có thêm nhiều điều đáng mong chờ — và thật nhiều ngày bình thường nhưng vui.</p><p>Chúc mừng sinh nhật Lê Tuấn Doãn Tú. Chúc Bin luôn khỏe mạnh, làm được những điều mình ấp ủ, có thêm nhiều chuyến đi hay ho và gặp thật nhiều điều tử tế. Mong công việc bớt căng, những lần phát hành đều suôn sẻ, deadline dễ thở hơn một chút — và lúc nào cũng có lý do để cười.</p><div class="note">GHI CHÚ PHIÊN BẢN 28: Vẫn là Bin, chỉ thêm một tuổi mới và thêm thật nhiều chuyện hay để kể. ♡</div></div></div></section>
+
+
+<section class="gallery section memory-atlas" id="gallery">
+<div class="section-kicker">02 / MEMORY ATLAS · BẢN ĐỒ KÝ ỨC</div>
+<div class="section-head"><div><h2>Mở bản đồ,<br><em>tìm lại chúng mình.</em></h2><p>67 mảnh ký ức được cất thành từng vùng nhỏ. Chọn một tọa độ để ghé thăm, rồi thong thả xem lại nhé.</p></div><span class="count" id="galleryCount">67 TẤM · 01 CUỐN ALBUM</span></div>
+<div class="atlas-map"><div class="atlas-map-title">THE MEMORY ATLAS <small>VOL. 28 · PRIVATE COLLECTION</small></div><div class="atlas-zones">
+<button class="atlas-zone active" data-zone="0"><span>01</span><b>Những chuyến đi &amp; ngày thường</b><small>LITTLE ADVENTURES · EVERYDAY</small></button>
+<button class="atlas-zone" data-zone="1"><span>02</span><b>Bo &amp; Lựu</b><small>THE CAT CHAPTER</small></button>
+<button class="atlas-zone" data-zone="2"><span>03</span><b>Chuyện của hai đứa mình</b><small>OUR MOMENTS</small></button>
+</div><div class="atlas-compass">N<br>✦<br>↓</div></div>
+<div class="atlas-current"><span id="atlasCurrentLabel">COORDINATE 01 · LITTLE MOMENTS</span><span id="atlasCurrentCount">17 KỶ NIỆM</span></div>
+<div id="galleryGrid" class="gallery-grid atlas-gallery"></div><div class="gallery-pagination" id="galleryPagination" aria-label="Chuyển trang ký ức"></div>
+<div class="atlas-footnote">✦ Một vài khoảnh khắc rất bình thường, nhưng mình muốn giữ lại thật lâu. ♡</div></section>
+<section class="stats"><div><strong>28</strong><span>năm tuổi đời</span></div><div><strong>∞</strong><span>meme đang chờ</span></div><div><strong>0</strong><span>không có nút gỡ cài đặt</span></div><div><strong>1</strong><span>một người đặc biệt</span></div></section>
+
+<section class="videos section diary-section" id="videos">
+  <div class="section-kicker">03 / VIDEO DIARY · NHẬT KÝ KÝ ỨC</div>
+  <div class="diary-heading">
+    <div>
+      <p class="diary-overline">A FEW MOMENTS, KEPT FOREVER</p>
+      <h2>Nhật ký bằng<br><em>những thước phim.</em></h2>
+      <p class="diary-intro">Có những khoảnh khắc mình chẳng kịp chuẩn bị máy ảnh. Chỉ đơn giản là ở đó, vui vẻ bên nhau — rồi vô tình lưu lại được một đoạn ký ức thật đẹp.</p>
+    </div>
+    <div class="diary-stamp" aria-label="Bốn đoạn phim kỷ niệm">
+      <span>PERSONAL</span><strong>VIDEO<br>DIARY</strong><small>VOL. 28 · 04.11.2026</small>
+    </div>
+  </div>
+  <div class="diary-note"><span>✳</span> Lật từng trang nhật ký nhé. Mỗi đoạn phim là một mẩu chuyện nhỏ.</div>
+  <div class="diary-grid">
+    <article class="diary-entry diary-entry-featured" data-video="0">
+      <div class="diary-frame frame-sunset"><span class="frame-label">PAGE 01 · THE LITTLE MOMENTS</span><span class="frame-play">▶</span><span class="frame-index">01</span></div>
+      <div class="diary-entry-copy"><span class="diary-date">MEMORY NOTE 01</span><h3>Một khoảnh khắc đang chuyển động</h3><p>Có những điều chỉ khi xem lại, mình mới nhận ra chúng đáng nhớ đến nhường nào.</p><button type="button" class="diary-watch">Xem lại đoạn phim <span>↗</span></button></div>
+    </article>
+    <article class="diary-entry" data-video="1">
+      <div class="diary-frame frame-film"><span class="frame-label">PAGE 02 · BEHIND THE CAMERA</span><span class="frame-play">▶</span><span class="frame-index">02</span></div>
+      <div class="diary-entry-copy"><span class="diary-date">MEMORY NOTE 02</span><h3>Chuyện trong máy ảnh</h3><p>Một chút ngẫu nhiên, một chút đáng yêu, và rất nhiều điều thân quen.</p><button type="button" class="diary-watch">Mở trang nhật ký <span>↗</span></button></div>
+    </article>
+    <article class="diary-entry" data-video="2">
+      <div class="diary-frame frame-paper"><span class="frame-label">PAGE 03 · THE REAL US</span><span class="frame-play">▶</span><span class="frame-index">03</span></div>
+      <div class="diary-entry-copy"><span class="diary-date">MEMORY NOTE 03</span><h3>Phiên bản chân thật</h3><p>Không cần hoàn hảo. Chỉ cần là những khoảnh khắc rất thật của chúng ta.</p><button type="button" class="diary-watch">Mở trang nhật ký <span>↗</span></button></div>
+    </article>
+    <article class="diary-entry diary-entry-featured" data-video="3">
+      <div class="diary-frame frame-keepsake"><span class="frame-label">PAGE 04 · SAVE THIS FOREVER</span><span class="frame-play">▶</span><span class="frame-index">04</span></div>
+      <div class="diary-entry-copy"><span class="diary-date">MEMORY NOTE 04</span><h3>Lưu thêm vào bộ nhớ</h3><p>Gửi anh một đoạn phim nhỏ — để sau này mình vẫn có thể cùng nhau xem lại.</p><button type="button" class="diary-watch">Xem trang cuối <span>↗</span></button></div>
+    </article>
+  </div>
+  <div class="diary-footer"><span>END OF THIS ENTRY</span><p>Máy quay có thể dừng, nhưng những điều đẹp đẽ thì mình vẫn mang theo. ♡</p><span>— TO BE CONTINUED —</span></div>
+  <div class="diary-player" id="diaryPlayer" aria-hidden="true">
+    <div class="diary-player-backdrop" data-diary-close></div>
+    <div class="diary-player-panel" role="dialog" aria-modal="true" aria-label="Xem lại video kỷ niệm">
+      <button class="diary-player-close" type="button" data-diary-close aria-label="Đóng video">×</button>
+      <div class="diary-player-meta"><span id="diaryPlayerPage">MEMORY NOTE 01</span><span>VIDEO DIARY · VOL. 28</span></div>
+      <video id="diaryPlayerVideo" controls playsinline preload="none"></video>
+      <div class="diary-player-caption"><span id="diaryPlayerTitle">Một khoảnh khắc đang chuyển động</span><small>Take your time. This one is yours. ♡</small></div>
+    </div>
+  </div>
+</section>
+<section class="games section" id="games">
+<div class="section-kicker">04 / COUPLE QUEST · TWO PLAYER MODES</div>
+<div class="section-head"><div><h2>Hai vòng thử thách.<br><em>Một đồng đội cấp 28.</em></h2><p>Bo &amp; Lựu phụ trách QA đời sống. Còn Network Ops là ca trực đặc biệt dành cho người hiểu hạ tầng — chọn cách xử lý, đọc dấu hiệu và tìm đúng nguyên nhân.</p></div><span class="count">CAT QA · NETWORK OPS</span></div>
+
+<div class="game-grid couple-quest-grid">
+<article class="game-card couple-quest-card">
+<div class="game-icon">🐾</div><span class="game-type">MODE 01 · QUALITY ASSURANCE BY BO &amp; LỰU</span>
+<h3>Hội đồng mèo kiểm duyệt</h3>
+<p>Năm tình huống lấy từ thói quen thật của Bo và Lựu. Trả lời đúng để nhận dấu paw-approved; sai thì hội đồng cho thử lại.</p>
+<div id="catQuiz" class="couple-quiz">
+<div class="quiz-progress"><b id="catStep">01 / 05</b><span id="questBadge">CAT QA · CASE 01</span></div>
+<div class="quest-progress-track"><span id="questProgressFill"></span></div>
+<h4 id="catQuestion"></h4><div id="catAnswers" class="answers"></div>
+<p id="catFeedback" class="feedback" aria-live="polite"></p>
+<button id="catNext" class="small-btn" hidden>Câu tiếp theo →</button>
+<div class="quest-stamps" aria-label="Huy hiệu mèo"><span id="stamp1">🐾</span><span id="stamp2">👀</span><span id="stamp3">🛏️</span><span id="stamp4">💤</span><span id="stamp5">♡</span></div>
+</div>
+<div id="catQaDone" class="mini-complete" hidden>🐾 CAT QA PASSED · Hai boss đã tạm hài lòng với con sen.</div>
+</article>
+
+<article class="game-card couple-quest-card network-ops-card">
+<div class="game-icon">🖧</div><span class="game-type">MODE 02 · NETWORK OPERATIONS</span>
+<h3>On-call: cứu hệ thống!</h3>
+<p>Bốn tình huống triển khai hạ tầng thực tế: chia subnet cho nhà hàng, cấu hình VLAN cho AP/switch, xử lý DHCP tại nhà máy và kiểm tra routing/ACL tới server. Đọc sơ đồ và triệu chứng, chọn bước kiểm tra hợp lý nhất nhé.</p>
+<div id="networkGame" class="couple-quiz">
+<div class="quiz-progress"><b id="netStep">TICKET 01 / 04</b><span id="netBadge">INCIDENT · DNS</span></div>
+<div class="quest-progress-track"><span id="netProgressFill"></span></div>
+<div class="incident-panel"><span class="incident-status">● INCIDENT OPEN</span><p id="netScenario"></p></div>
+<h4 id="netQuestion">Bước xử lý nào nên làm trước?</h4>
+<div id="netAnswers" class="answers"></div>
+<p id="netFeedback" class="feedback" aria-live="polite"></p>
+<button id="netNext" class="small-btn" hidden>Đóng ticket &amp; tiếp tục →</button>
+<div class="quest-stamps" aria-label="Network badges"><span id="netStamp1">DHCP</span><span id="netStamp2">IP CONFLICT</span><span id="netStamp3">ACL</span><span id="netStamp4">ROUTE</span></div>
+</div>
+<div id="netDone" class="mini-complete" hidden>⚡ ALL INCIDENTS RESOLVED · Network Ops approved. Đi ăn bánh thôi!</div>
+</article>
+</div>
+<div id="qaGate" class="qa-gate" hidden><span>✦ BOTH MODES COMPLETE · LEVEL 28</span><h3>PARTNER IN CRIME – VERIFIED! 🏆</h3><p>Bo &amp; Lựu đã duyệt. Bốn tình huống triển khai mạng cũng được xử lý. Đồng đội cấp 28 chính thức qua vòng kiểm định!</p><a class="primary" href="#cats">Gặp hai vị giám khảo ↓</a></div>
+</section>
+<section class="cats-section section" id="cats" hidden>
+<div class="section-kicker">05 / HỒ SƠ HAI BÉ MÈO</div>
+<div class="section-head"><div><h2>Hai nhân vật phụ,<br><em>quyền lực chính.</em></h2><p>Hồ sơ được xác minh bằng ảnh thật từ kho lưu niệm. Không nhận nhầm boss nha!</p></div><span class="count">BO 🧡 · LỰU 🍇</span></div>
+<div class="cat-profiles">
+<article class="cat-profile bo-profile"><div class="cat-copy"><span class="game-type">MÈO ĐẦU TIÊN · 7 NĂM ĐỒNG HÀNH</span><h3>Bo 🧡</h3><p>Đây mới là Bo — bạn mèo vàng đầu tiên của nhà mình. Hôm nay Bo có nhiệm vụ đặc biệt: tham gia hội đồng giám khảo và giám sát nhiệm vụ bí mật.</p><p class="cat-quip">Chức vụ: Tổng quản kho bánh và người giữ chìa khóa bí mật.</p></div><div class="bo-collage"><img src="assets/photos/bo-portrait.jpg" alt="Bo mèo vàng trắng"><img src="assets/photos/album-37.jpg" alt="Bo mèo vàng trắng"></div></article>
+<article class="cat-profile luu-profile"><div class="cat-copy"><span class="game-type">MÈO THỨ HAI · CHUYÊN GIA NGHỊCH NGỢM</span><h3>Lựu 🍇</h3><p>Còn đây là Lựu — đúng bạn mèo mướp nằm trên chiếc đệm xám. Nhìn hiền vậy thôi chứ độ tinh nghịch thì khỏi cần kiểm tra.</p><p class="cat-quip">Chức vụ: Trưởng ban bày trò, phá giấc ngủ và tạo meme.</p></div><div class="luu-collage"><img src="assets/photos/luu-portrait.jpg" alt="Lựu nằm trên đệm xám"><img src="assets/photos/album-24.jpg" alt="Lựu nằm ngửa tinh nghịch"><img src="assets/photos/album-29.jpg" alt="Lựu cuộn mình nghỉ ngơi"><img src="assets/photos/album-39.jpg" alt="Lựu ngồi nhìn camera"></div></article>
+</div>
+<div class="puzzle-card secret-hunt-card image-jigsaw-card">
+ <div class="puzzle-copy"><span class="game-type">BO'S BIRTHDAY · ROTATION PUZZLE</span><h3>Xoay đúng chiều ảnh sinh nhật của Bo!</h3><p>Ảnh Bo đã được chia thành 9 mảnh. Mỗi mảnh đang bị xoay lệch một chút — nhấn vào mảnh để xoay 90° theo chiều kim đồng hồ. Quan sát các đường nối và màu sắc để đưa cả bức ảnh về đúng chiều nhé!</p><p id="jigsawStatus" class="feedback">Mảnh đúng chiều: 0 / 9 · Số lượt xoay: 0</p><div class="jigsaw-rules"><span>01 · Nhấn một mảnh để xoay 90°</span><span>02 · Ghép hướng các chi tiết liền mạch</span><span>03 · Đưa cả 9 mảnh về đúng chiều</span></div><button id="jigsawShuffle" class="small-btn" type="button">Xáo trộn lại ↻</button></div>
+ <div class="jigsaw-console"><div class="hunt-topline"><span>BO'S BIRTHDAY RESCUE</span><span>9 TILES · ROTATE 90°</span></div><div id="jigsawBoard" class="jigsaw-board rotation-board" role="group" aria-label="Trò chơi xoay 9 mảnh ảnh Bo"></div><p id="jigsawFeedback" class="feedback" aria-live="polite"></p><div id="jigsawReveal" class="jigsaw-reveal" hidden><span>✦ MEMORY RESTORED</span><h3>Giải cứu Bo thành công!</h3><p><strong id="jigsawRank">GOLD SOLVER</strong> · <span id="jigsawMovesFinal">0 lượt xoay</span></p><p>Bo đã trở lại đúng chiều. Boss gửi một cái nheo mắt cảm ơn con sen! 🐾</p></div></div>
+</div>
+<div id="catReward" class="quest-clear" hidden>
+ <div class="quest-clear-icon">🧭</div><span class="game-type">CHECKPOINT ĐÃ KÍCH HOẠT</span>
+ <h3>Đã tìm thấy tọa độ kho báu!</h3>
+ <p>Bức ảnh đã được khôi phục. Ký ức đã mở, nhưng kho báu vàng vẫn được niêm phong đến tận cuối hành trình.</p>
+ <div class="sealed-clue"><span>FINAL TREASURE</span><b>▰ ▰ ▰ ▰ ▰</b><small>CONTENTS: CLASSIFIED</small></div>
+ <a class="primary" href="cake.html">Tiếp tục hành trình · Qua thổi nến 🎂</a>
+</div>
+</section>
+<section class="letter section" id="final" hidden><div class="section-kicker">05 / LỜI NHẮN CUỐI</div><div class="letter-shell"><div class="letter-top"><span>BÍ MẬT · CHỈ DÀNH CHO ANH</span><span>♡ 04.11.2026</span></div><div class="lock-icon">✉</div><p class="eyebrow">CÒN MỘT ĐIỀU NỮA</p><h2>Sẵn sàng mở<br><em>món quà bí mật?</em></h2><p class="letter-desc">Mọi manh mối đã được thu thập. Nhập mật mã cuối cùng để mở rương kho báu nhé.</p><div class="unlock"><input id="password" type="text" placeholder="Nhập mật khẩu..." autocomplete="off"><button id="unlockBtn">Mở thư ♡</button></div><p class="password-hint" id="passwordHint">Gợi ý đầu tiên: Hai chữ anh hay buột miệng gọi nghe vừa thân quen vừa… tròn trịa. 😼</p><p id="unlockMsg" class="feedback"></p><div id="secretLetter" class="secret-letter" hidden>
+<h3>Gửi anh,</h3>
+<p>Chúc mừng sinh nhật anh. Mong tuổi 28 sẽ dịu dàng với anh hơn một chút, mang đến nhiều cơ hội tốt, nhiều tiếng cười và thật nhiều ngày mà anh cảm thấy mình đang sống đúng điều mình muốn.</p>
+<p>Cảm ơn anh vì đã xuất hiện trong những bức ảnh, những chuyến đi và cả những khoảnh khắc rất bình thường. Mong rằng sau này album ảnh vẫn còn nhiều thứ để lưu, và tụi mình vẫn còn nhiều chuyện để cười cùng nhau.</p>
+<p class="sign">Thương anh,<br><b>người luôn đứng về phe anh ♡</b></p><div class="confetti">✦ ✧ ♡ ✦ ✧ ♡</div>
+</div>
+<div id="finalSurprise" class="final-surprise" hidden>
+ <div class="final-stamp">HỘI ĐỒNG MÈO<br><b>ĐÃ PHÊ DUYỆT</b> 🐾</div>
+ <p class="eyebrow">BIÊN BẢN QUAN TRỌNG · KHÔNG ĐƯỢC THẤT LẠC</p>
+ <h3>GIẤY CHỨNG NHẬN SEN CẤP CAO</h3>
+ <p>Trao tặng <b>anh Tú</b> danh hiệu:</p>
+ <div class="award-title">Người được Bo &amp; Lựu cho phép<br>tiếp tục làm sen trọn đời</div>
+ <p class="award-small">Đặc quyền đi kèm: được ngắm mèo, được mèo làm phiền lúc ngủ, và có trách nhiệm mở đồ ăn đúng giờ.</p>
+ <div class="cat-signatures"><span>🐈 Bo<br><small>Tổng quản</small></span><span>😼 Lựu<br><small>Ban quậy phá</small></span></div>
+ <button id="finalBoom" class="final-boom">Bấm để nhận lời chúc cuối cùng 🎆</button>
+ <p id="finalMessage" class="final-message" hidden>Đùa thì đùa vậy thôi. Mong anh luôn có thật nhiều lý do để vui, luôn được yêu thương, và dù ngày mai có bận rộn đến đâu cũng nhớ rằng có một người rất vui vì được đồng hành cùng anh. ❤️</p>
+ <div id="finalGoodbyeTrigger" class="final-goodbye-trigger" hidden><button id="openFinalGoodbye" class="final-goodbye-btn" type="button">Và đây là lời tạm biệt cuối cùng 👋</button></div>
+ <section id="finalGoodbye" class="final-goodbye" hidden aria-label="Màn chào tạm biệt cuối cùng">
+  <div class="final-goodbye-card">
+   <span class="final-goodbye-kicker">HẾT TIỆC RỒI, NHƯNG THƯƠNG THÌ CÒN</span>
+   <h3>Chúc mừng sinh nhật anh! 🎂</h3>
+   <p>Mong tuổi 28 của anh sẽ có thật nhiều niềm vui, những chuyến đi đáng nhớ và những ngày bình yên. Cảm ơn anh vì đã đi đến tận dòng cuối cùng của món quà này. Hẹn anh ở những kỷ niệm tiếp theo nhé. ❤️</p>
+   <div class="final-walkway" aria-hidden="true"><span id="finalWalkingCat">🐈</span></div>
+   <small>Bo &amp; Lựu xin phép đi ăn bánh tiếp đây. Bye bye! 🐾</small>
+   <button id="replayFinalCat" class="final-goodbye-replay" type="button">Cho mèo đi ngang lần nữa 😹</button>
+   <button id="openTreasureVault" class="treasure-open-btn" type="button">Mở tọa độ cuối cùng 🔐</button>
+  </div>
+ </section>
+ <section id="goldenTreasure" class="golden-treasure" hidden aria-label="Kho báu bí mật cuối cùng">
+  <div class="treasure-stars">✦　✧　✦</div><span class="game-type">MISSION 28 · FINAL REWARD</span>
+  <p class="treasure-kicker">BẠN ĐÃ ĐI ĐẾN CUỐI HÀNH TRÌNH</p>
+  <h2>THE GOLDEN<br><em>GIFT</em></h2>
+  <div class="treasure-glow"><div class="treasure-chest">🎁</div></div>
+  <p class="treasure-caption">Kho báu bí mật dành riêng cho anh. Cảm ơn anh đã cùng tui đi hết chuyến phiêu lưu này. ♡</p>
+  <img class="bo-reveal treasure-reveal" data-secret-src="assets/photos/gift-reveal.jpg" alt="Món quà vàng bí mật được hé lộ ở cuối hành trình">
+  <div class="treasure-seal">UNLOCKED · 04.11.2026</div>
+ </section>
+</div></div></section>
+<footer><span>SINH NHẬT <b>28 TUỔI</b></span><span>LÀM BẰNG TÌNH THƯƠNG VÀ MỘT CHÚT TINH NGHỊCH</span><a href="#top">LÊN ĐẦU TRANG ↑</a></footer>
+</main>
+<audio id="soundtrack" src="assets/music/birthday-song.mp3" preload="none"></audio>
+<div id="lightbox" class="lightbox" hidden><button id="closeLightbox">×</button><img id="lightboxImg" alt=""><p id="lightboxCaption"></p></div>
+<script src="gate.js"></script>
+<script src="script.js"></script>
+</body></html>

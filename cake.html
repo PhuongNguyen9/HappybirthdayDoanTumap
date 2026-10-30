@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fff0e4"><title>Bánh sinh nhật tuổi 28</title><link rel="stylesheet" href="cake.css"></head>
+<body class="birthday-gate-locked">
+<div class="birthday-gate" id="birthdayGate" role="dialog" aria-modal="true" aria-labelledby="birthdayGateTitle" aria-describedby="birthdayGateDescription">
+  <div class="birthday-gate-card">
+    <div class="gate-sparkle" aria-hidden="true">✦　♡　✦</div>
+    <span class="gate-kicker">A PRIVATE LITTLE UNIVERSE · 04.11.2026</span>
+    <h1 id="birthdayGateTitle">Chỉ dành riêng<br><em>cho anh thôi.</em></h1>
+    <p class="gate-copy" id="birthdayGateDescription">Có một cánh cửa nhỏ đang chờ được mở. Nhập mật mã của chúng mình để bắt đầu chuyến phiêu lưu tuổi 28 nhé.</p>
+    <div class="gate-heart" aria-hidden="true">♡</div>
+    <form class="birthday-gate-form" id="birthdayGateForm">
+      <input id="birthdayGatePassword" type="password" placeholder="Mật mã bí mật…" autocomplete="off" autocapitalize="none" spellcheck="false" aria-label="Mật mã bí mật" required>
+      <button id="birthdayGateSubmit" type="submit">MỞ CÁNH CỬA ♡</button>
+    </form>
+    <p class="gate-message" id="birthdayGateMessage" aria-live="polite"></p>
+    <p class="gate-footnote">MADE WITH LOVE · FOR ONE VERY SPECIAL PERSON</p>
+  </div>
+</div>
+<canvas id="fireworksCanvas" aria-hidden="true"></canvas><div class="sparkles"></div><div class="cake-cats" aria-hidden="true">🐈 🎈 🐾</div>
+<header><a href="index.html">← QUAY LẠI CHUYẾN ĐI</a><span>04.11.2026 · SINH NHẬT TUỔI 28</span></header>
+<main><p class="eyebrow">KHOẢNH KHẮC NGỌT NGÀO NHẤT</p><h1>Ước một điều<br><em>rồi thổi nến nhé!</em></h1><p class="intro">Hôm nay anh là nhân vật chính. Cứ ước một điều thật vui rồi thổi nến nhé! 🐾</p>
+<div class="cake-stage" id="cakeStage"><div class="wish-tag">28<br><small>ĐIỀU ƯỚC</small></div><div class="candles"><div class="candle c1"><i class="flame"></i></div><div class="candle c2"><i class="flame"></i></div><div class="candle c3"><i class="flame"></i></div></div>
+<div class="cake"><div class="top-cream"></div><div class="drips"><i></i><i></i><i></i><i></i><i></i></div><div class="berries">🍓　🍒　🍓</div><div class="cake-side"><span>♡</span><b>HAPPY 28</b><span>♡</span></div><div class="cake-layer"></div></div><div class="plate"></div></div>
+<div class="controls"><button id="blow">Thổi nến đi anh! 💨</button><button id="relight" class="ghost" hidden>Thắp nến lại</button></div><p id="wish" aria-live="polite">Nhắm mắt, nghĩ một điều ước rồi thổi nến nha. ✨</p>
+<audio id="cakeSoundtrack" src="assets/music/happy-birthday-cake.mp3" preload="auto" loop autoplay></audio>
+<div class="cake-music-note" id="cakeMusicNote" aria-live="polite">♫ Nhạc sinh nhật đang phát nền</div>
+<button id="cakeMusic" class="cake-music" type="button" hidden>♫ Chạm để bật nhạc</button>
+<div class="birthday-note"><span>LỜI CHÚC TUỔI 28</span><p>Chúc anh luôn khỏe mạnh, vui vẻ, làm được những điều mình thích và gặp thật nhiều người tử tế. Mong tuổi mới có nhiều chuyến đi hay, nhiều cơ hội tốt và những ngày bình thường cũng đủ vui để nhớ. ♡</p></div>
+<a class="back" id="letterLink" href="index.html#final" hidden>Ước xong rồi? Quay lại đọc lời nhắn nhé →</a></main>
+
+<div class="surprise-overlay" id="catSurprise" aria-hidden="true">
+ <div class="surprise-card" role="dialog" aria-modal="true" aria-labelledby="surpriseTitle">
+  <button class="surprise-close" id="closeSurprise" aria-label="Đóng">×</button>
+  <p class="surprise-kicker">THÔNG BÁO KHẨN TỪ HỘI ĐỒNG MÈO</p>
+  <h2 id="surpriseTitle">BẤT NGỜ CHƯA? 🐾</h2>
+  <div class="surprise-video-wrap"><video id="birthdayCatVideo" playsinline preload="metadata"><source src="assets/videos/birthday-cat-surprise.mp4" type="video/mp4"></video></div>
+  <p class="surprise-caption">Hai vị giám khảo đã xuất hiện để xác nhận: hôm nay anh được quyền ăn bánh, nhận quà và làm nũng không giới hạn.</p>
+  <button class="surprise-replay" id="replaySurprise">Xem lại màn xuất hiện 😼</button>
+ </div>
+</div>
+
+<div class="cake-clap-cat" id="cakeClapCat" aria-label="Mèo đang vỗ tay chúc mừng">
+  <span class="clap-cat-face">🐱</span><span class="clap-paws">👏</span>
+  <span class="clap-caption">Yeahhh! 🎉</span>
+</div>
+<script src="gate.js"></script>
+<script>
+
+function launchCakeFireworks(){
+ const canvas=document.getElementById('fireworksCanvas');if(!canvas||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ const ctx=canvas.getContext('2d');let w=innerWidth,h=innerHeight,parts=[],raf=0;
+ const palette=['#f5bd62','#ff8066','#f7e6a0','#9ed8c1','#d9b7ff','#fff'];
+ function size(){const d=Math.min(devicePixelRatio||1,2);w=innerWidth;h=innerHeight;canvas.width=w*d;canvas.height=h*d;ctx.setTransform(d,0,0,d,0,0)}size();addEventListener('resize',size);
+ function burst(x,y){const color=palette[Math.floor(Math.random()*palette.length)];for(let i=0;i<64;i++){const a=i*Math.PI*2/64,s=1+Math.random()*3.8;parts.push({x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s,life:55+Math.random()*20,color,r:1+Math.random()*2})}}
+ [[.22,.28],[.5,.18],[.78,.3],[.35,.42],[.68,.45]].forEach(([x,y],i)=>setTimeout(()=>burst(w*x,h*y),i*230));
+ function draw(){ctx.clearRect(0,0,w,h);parts=parts.filter(p=>p.life>0);for(const p of parts){p.x+=p.vx;p.y+=p.vy;p.vy+=.035;p.vx*=.985;p.life--;ctx.globalAlpha=p.life/75;ctx.fillStyle=p.color;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill()}ctx.globalAlpha=1;if(parts.length)raf=requestAnimationFrame(draw)}
+ if(!raf)raf=requestAnimationFrame(draw);
+}
+
+// Âm thanh hiệu ứng nhỏ: tiếng leng keng, tiếng gió và tiếng "pop" vui tai.
+let sfxContext;
+function playCakeSfx(kind){
+ try{
+  const AudioCtx=window.AudioContext||window.webkitAudioContext;
+  if(!AudioCtx)return;
+  sfxContext=sfxContext||new AudioCtx();
+  if(sfxContext.state==='suspended')sfxContext.resume();
+  const ctx=sfxContext,now=ctx.currentTime;
+  const gain=ctx.createGain();gain.connect(ctx.destination);
+  if(kind==='chime'){
+   gain.gain.setValueAtTime(.0001,now);gain.gain.exponentialRampToValueAtTime(.16,now+.025);gain.gain.exponentialRampToValueAtTime(.0001,now+1.25);
+   [880,1174.66,1567.98].forEach((freq,k)=>{const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=freq;g.gain.value=.42/(k+1);o.connect(g);g.connect(gain);o.start(now+k*.09);o.stop(now+1.25)});
+  }else if(kind==='whoosh'){
+   const length=Math.floor(ctx.sampleRate*.65),buffer=ctx.createBuffer(1,length,ctx.sampleRate),data=buffer.getChannelData(0);
+   for(let n=0;n<length;n++)data[n]=(Math.random()*2-1)*(1-n/length);
+   const noise=ctx.createBufferSource(),filter=ctx.createBiquadFilter();filter.type='lowpass';filter.frequency.setValueAtTime(1800,now);filter.frequency.exponentialRampToValueAtTime(240,now+.6);
+   noise.buffer=buffer;noise.connect(filter);filter.connect(gain);gain.gain.setValueAtTime(.0001,now);gain.gain.exponentialRampToValueAtTime(.22,now+.08);gain.gain.exponentialRampToValueAtTime(.0001,now+.65);noise.start(now);noise.stop(now+.66);
+  }else{
+   gain.gain.setValueAtTime(.0001,now);gain.gain.exponentialRampToValueAtTime(.22,now+.012);gain.gain.exponentialRampToValueAtTime(.0001,now+.24);
+   const o=ctx.createOscillator();o.type='triangle';o.frequency.setValueAtTime(660,now);o.frequency.exponentialRampToValueAtTime(220,now+.22);o.connect(gain);o.start(now);o.stop(now+.24);
+  }
+ }catch(e){}
+}
+if(sessionStorage.getItem('birthdayPuzzleCompleted')!=='yes'){window.location.replace('index.html#games');}
+const stage=document.getElementById('cakeStage'),blow=document.getElementById('blow'),relight=document.getElementById('relight'),wish=document.getElementById('wish'),musicHint=null;
+blow.addEventListener('click',()=>{cakeSoundtrack.pause();cakeMusicNote.textContent='♫ Tạm lắng một chút — hãy tận hưởng khoảnh khắc này';playCakeSfx('whoosh');setTimeout(()=>playCakeSfx('chime'),420);launchCakeFireworks();stage.classList.add('blown');blow.hidden=true;relight.hidden=false;wish.textContent='Điều ước đã được gửi đi! ✨ Chúc anh tuổi mới toàn điều may mắn.';sessionStorage.setItem('birthdayCakeBlown','yes');document.getElementById('letterLink').hidden=false;
+setTimeout(()=>{const overlay=document.getElementById('catSurprise'),video=document.getElementById('birthdayCatVideo');overlay.classList.add('show');overlay.setAttribute('aria-hidden','false');playCakeSfx('pop');video.currentTime=0;video.play().catch(()=>{});},650);for(let i=0;i<55;i++){const p=document.createElement('b');p.className='confetti';p.textContent=['✦','♡','✧','🐾','🎉'][i%5];p.style.left=Math.random()*100+'%';p.style.animationDelay=Math.random()*.8+'s';stage.appendChild(p);setTimeout(()=>p.remove(),3200)}});
+const cakeMusic=document.getElementById('cakeMusic'),cakeSoundtrack=document.getElementById('cakeSoundtrack'),cakeMusicNote=document.getElementById('cakeMusicNote');
+async function startCakeMusic(){
+ try{
+  await cakeSoundtrack.play();
+  cakeMusic.hidden=true;
+  cakeMusicNote.textContent='♫ Nhạc sinh nhật đang phát nền';
+ }catch(e){
+  cakeMusic.textContent='♫ Chạm để bật nhạc';
+  cakeMusic.hidden=false;
+  cakeMusicNote.textContent='Trình duyệt đang chặn tự phát — chạm một lần để bật nhạc nha.';
+ }
+}
+async function resumeCakeMusicAfterSurprise(){
+ await startCakeMusic();
+}
+startCakeMusic();
+// Khi rời màn bánh kem, dừng nhạc riêng để không chồng với soundtrack trang chính.
+window.addEventListener('pagehide',()=>{if(cakeSoundtrack){cakeSoundtrack.pause();cakeSoundtrack.currentTime=0;}});
+
+// Nút nhạc chỉ là phương án dự phòng khi trình duyệt chặn autoplay; không còn nút tạm dừng.
+cakeMusic.addEventListener('click',async()=>{await startCakeMusic();});
+
+const surprise=document.getElementById('catSurprise'),catVideo=document.getElementById('birthdayCatVideo');
+document.getElementById('closeSurprise').addEventListener('click',()=>{
+ surprise.classList.remove('show');surprise.setAttribute('aria-hidden','true');catVideo.pause();
+ resumeCakeMusicAfterSurprise();
+ // Sau màn mèo bất ngờ, chuyển thẳng sang slide chào tạm biệt cuối cùng.
+ setTimeout(showGoodbye,420);
+});
+document.getElementById('replaySurprise').addEventListener('click',()=>{playCakeSfx('pop');catVideo.currentTime=0;catVideo.play().catch(()=>{});});
+relight.addEventListener('click',()=>{surprise.classList.remove('show');surprise.setAttribute('aria-hidden','true');catVideo.pause();resumeCakeMusicAfterSurprise();stage.classList.remove('blown');blow.hidden=false;relight.hidden=true;wish.textContent='Nến sáng lại rồi. Còn muốn ước thêm điều gì không? 🥹'});
+
+
+// Mèo cổ vũ nhún nhảy theo trạng thái phát nhạc.
+const clapCat=document.getElementById('cakeClapCat');
+function syncClapCat(){clapCat.classList.toggle('is-dancing',!cakeSoundtrack.paused);}
+cakeSoundtrack.addEventListener('play',syncClapCat);
+cakeSoundtrack.addEventListener('pause',syncClapCat);
+cakeSoundtrack.addEventListener('ended',syncClapCat);
+syncClapCat();
+
+// Màn chào tạm biệt cuối cùng với mèo mập đi ngang.
+const goodbyeOverlay=document.getElementById('goodbyeOverlay');
+const goodbyeOpen=document.getElementById('goodbyeOpen');
+function showGoodbye(){
+ goodbyeOverlay.classList.add('show');
+ goodbyeOverlay.setAttribute('aria-hidden','false');
+ const cat=document.querySelector('.walking-cat');
+ cat.classList.remove('walk-across');
+ void cat.offsetWidth;
+ cat.classList.add('walk-across');
+ playCakeSfx('chime');
+}
+goodbyeOpen.addEventListener('click',showGoodbye);
+document.getElementById('goodbyeClose').addEventListener('click',()=>{
+ goodbyeOverlay.classList.remove('show');
+ goodbyeOverlay.setAttribute('aria-hidden','true');
+});
+document.getElementById('goodbyeReplay').addEventListener('click',showGoodbye);
+</script></body></html>
